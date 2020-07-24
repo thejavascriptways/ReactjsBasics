@@ -1,0 +1,64 @@
+# Next Gen Javascript or ES6/ES7
+    
+    ## Var vs let/const
+        Variable is used in ES5 or earlier
+        In ES6 - let and const  are introduced, let is  varibales and const is for constant values.
+    
+    ## Arrow Functions (Different ways to create functions with arrows)
+        const printMyName = p1 => {
+            console.log(p1);
+        }
+        printMyName("One parameter");
+
+
+        const printMyName = (p1, p2) => {
+            console.log(p1, p2);
+        }
+        printMyName("Two","Paramaters");
+
+    
+        const printMyName = () => {
+            console.log("No parameters Syntax");
+        }
+        printMyName();
+
+        const multiply = number => number * 2;  
+            if code is  only returning something with no other logic then this shorthand syntax can be used
+
+    ## Export and Imports (Modules)
+        default export person   -----> import person from './person.js'  or import psn from './person.js'
+        named export -------> import DS from './person.js' or  import DS as ds from './person.js' or import * as bundled from './person.js'
+
+    ## Classes
+        keywords - extends, super()
+
+    ## Spread and Rest Operators
+            ... (three dots)
+
+        As Spread Operator
+            Ex 1            
+            const nums =[1,2,3,4,5];
+            const  newnums = [...nums,6,7,8];
+            consolt.log(newnums)
+            output: [1,2,3,4,5,6,7,8]
+            
+            Ex2
+            const person = {
+                name: "ds";
+            }
+            const newPerson = {
+                ...person,
+                age : 36
+            }
+            console.log(newPerson);
+            Output: [object Object] {
+                name: 'ds'
+                age: 36
+            }
+
+        As Rest Operator
+            const filter = (...args) => return whatever logic using these args
+
+
+
+
