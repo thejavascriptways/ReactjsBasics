@@ -1,13 +1,13 @@
 Best Practices
  - there should always be one rood element in each component.
  - capitalise the component name or folder names in the project.
- - use ES6/ES7 or Next gen javascript syntaxes goind forward in React.
+ - use ES6/ES7 or Next gen javascript syntaxes goind forward in React. Always try to use ES6/7 arrow functions
  - when creating components, you have the choice between two different ways:
-        --Functional components (also referred to as "presentational", "dumb" or "stateless" components - more about this later in the course) =>
+        --Functional components (also referred to as "presentational", "dumb" or "stateless" components) =>
              const cmp = () => {
                   return <div>some JSX</div> 
                   } 
-            (using ES6 arrow functions as shown here is recommended but optional)
+            
         --class-based components (also referred to as "containers", "smart" or "stateful" components) => 
              class Cmp extends Component 
              { 
