@@ -17,10 +17,11 @@ Best Practices
                  } 
              }
     Use functional components as often as possible though. It's the best-practice.
-
+ - methds called from events should be named as methodNameHandler ( with word Handler at the end) 
 Notes
  - cannot use keyword Class to apply styles , this is reserved keyword for classes, use 'ClassName'.
  - each component needs to return/ render some JSX code - it defines which HTML code React should render to the real DOM in the end.
  - props  allow you to pass data from a parent (wrapping) component to a child (embedded) component.
  - state is used to change the state of component from inside the component
  - changes in props  and/ or state  trigger React to re-render your components and potentially update the DOM in the browser 
+ - SetState only changes the state of the property that is updated in setState, if there are other properties in original Stet, those will not be touched or discarded
