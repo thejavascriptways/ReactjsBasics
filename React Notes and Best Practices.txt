@@ -1,0 +1,24 @@
+Notes
+ - Cannot use keyword Class to apply styles , this is reserved keyword for classes, use 'ClassName'.
+ - Each component needs to return/ render some JSX code - it defines which HTML code React should render to the real DOM in the end.
+
+Best Practices
+ - There Should be always one rood element in each component
+ - Capitalise the component name or folder names in the project.
+ - use ES6/ES7 or Next gen javascript syntaxes goind forward in React.
+ - When creating components, you have the choice between two different ways:
+        --Functional components (also referred to as "presentational", "dumb" or "stateless" components - more about this later in the course) =>
+             const cmp = () => {
+                  return <div>some JSX</div> 
+                  } 
+            (using ES6 arrow functions as shown here is recommended but optional)
+        --class-based components (also referred to as "containers", "smart" or "stateful" components) => 
+             class Cmp extends Component 
+             { 
+                 render () 
+                 { 
+                     return <div>some JSX</div> 
+                 } 
+             }
+    Use functional components as often as possible though. It's the best-practice.
+
