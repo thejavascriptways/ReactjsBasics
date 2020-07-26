@@ -27,8 +27,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>First React Application!</h1>
+        
         <button onClick={this.switchNameHandler}>Switch</button>
+
+        <h3>Rendering Person data in App component</h3>
+        <p>{this.state.persons[0].name },{this.state.persons[0].age }</p>
+        <p>{this.state.persons[1].name },{this.state.persons[1].age }</p>
+        <p>{this.state.persons[2].name },{this.state.persons[2].age }</p>
+        
+        <h3>Rendering Person data using Person component!</h3>
         <Person name ={this.state.persons[0].name} age ={this.state.persons[0].age} />
         <Person name ={this.state.persons[1].name} age ={this.state.persons[1].age}> I am a soccer player!</Person>
         <Person name ={this.state.persons[2].name} age ={this.state.persons[2].age}>I am {this.state.persons[2].name}</Person>
