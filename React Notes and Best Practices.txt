@@ -1,27 +1,41 @@
 Best Practices
- - there should always be one rood element in each component.
- - capitalise the component name or folder names in the project.
- - use ES6/ES7 or Next gen javascript syntaxes goind forward in React. Always try to use ES6/7 arrow functions
- - when creating components, you have the choice between two different ways:
-        --Functional components (also referred to as "presentational", "dumb" or "stateless" components) =>
-             const cmp = () => {
-                  return <div>some JSX</div> 
-                  } 
-            
-        --class-based components (also referred to as "containers", "smart" or "stateful" components) => 
-             class Cmp extends Component 
-             { 
-                 render () 
-                 { 
-                     return <div>some JSX</div> 
-                 } 
-             }
-    Use functional components as often as possible though. It's the best-practice.
- - methds called from events should be named as methodNameHandler ( with word Handler at the end) 
+- capitalise the component name or folder names in the project.
+- use ES6/ES7 or Next gen javascript syntaxes goind forward in React. Always try to use ES6/7 arrow functions
+- when creating components, you have the choice between two different ways:
+    --Functional components (also referred to as "presentational", "dumb" or "stateless" components) =>
+        const cmp = () => {
+            return <div>some JSX</div> 
+            } 
+    
+    --class-based components (also referred to as "containers", "smart" or "stateful" components) => 
+        class Cmp extends Component 
+        { 
+            render () 
+            { 
+                return <div>some JSX</div> 
+            } 
+        }
+    Use functional components as often as possible. It's the best-practice.
+    Now prior to react -v 16.8 , there class based components was the only way to manage state of the component. But Since then with React Hooks,
+    state can be managed in functional components. Most of the projects use class based components for state management. Its a more traditional way. 
+    Hooks may or may be be the way forward to manage state but is an option to do so.
+
+- methds called from events should be named as methodNameHandler ( with word Handler at the end) 
+
 Notes
- - cannot use keyword Class to apply styles , this is reserved keyword for classes, use 'ClassName'.
- - each component needs to return/ render some JSX code - it defines which HTML code React should render to the real DOM in the end.
- - props  allow you to pass data from a parent (wrapping) component to a child (embedded) component.
- - state is used to change the state of component from inside the component
- - changes in props  and/ or state  trigger React to re-render your components and potentially update the DOM in the browser 
- - SetState only changes the state of the property that is updated in setState, if there are other properties in original Stet, those will not be touched or discarded
+- using "create-react-app" to create new application
+    install NodeJS from NodeJS.org.
+    npm install -g create-areact-app
+    --to ccreate new project, navifate to the directory where you want to create the project,u se the command
+        "create-react-app <appname>"
+        <optional> --scripts-version 1.1.15
+        ( this version number does not effect the version on Rect , but the folder structure. Can very in latest versions)
+        use npm start and npm build commands to run the app or if yarn is installed use yarn commands.
+- there should always be one rood element in each component.
+- cannot use keyword Class to apply styles , this is reserved keyword for classes, use 'ClassName'.
+- each component needs to return/ render some JSX code - it defines which HTML code React should render to the real DOM in the end.
+- props  allow you to pass data from a parent (wrapping) component to a child (embedded) component.
+- state is used to change the state of component from inside the component
+- changes in props  and/or state  trigger React to re-render your components and potentially update the DOM in the browser 
+- setState only changes the state of the property that is updated in setState, if there are other properties in original State, those will not be touched or discarded or updated.
+- React Hooks is a set of functions exposed by React to manage testate in functional components.
