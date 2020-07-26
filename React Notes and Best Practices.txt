@@ -18,7 +18,8 @@ Best Practices
     Use functional components as often as possible. It's the best-practice.
     Now prior to react -v 16.8 , there class based components was the only way to manage state of the component. But Since then with React Hooks,
     state can be managed in functional components. Most of the projects use class based components for state management. Its a more traditional way. 
-    Hooks may or may be be the way forward to manage state but is an option to do so.
+    React Hooks may or may be be the way forward to manage state but is an option to do so.
+    
 
 - methds called from events should be named as methodNameHandler ( with word Handler at the end) 
 
@@ -37,5 +38,11 @@ Notes
 - props  allow you to pass data from a parent (wrapping) component to a child (embedded) component.
 - state is used to change the state of component from inside the component
 - changes in props  and/or state  trigger React to re-render your components and potentially update the DOM in the browser 
-- setState only changes the state of the property that is updated in setState, if there are other properties in original State, those will not be touched or discarded or updated.
-- React Hooks is a set of functions exposed by React to manage testate in functional components.
+- setState only changes the state of the property that is updated in setState, if there are other properties in original State, 
+  those will not be touched or discarded or updated.
+- React Hooks
+    --React Hooks is a set of functions exposed by React to manage the state in functional components.
+    --Managing state in Class component setState only changes the state of the property that is updated in setState, 
+        if there are other properties in original State, those will not be touched or discarded or updated. 
+        In functional component(using Hooks) is the useState will discard the current state and replace it with new state, 
+        so all the states have to be updated again else they will be lost.
