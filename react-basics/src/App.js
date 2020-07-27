@@ -41,7 +41,7 @@ class App extends Component {
 
         <button onClick={this.switchNameHandler.bind(this,'Hazard')}>Switch</button>
 
-        <h3>Rendering Person data using Person component!</h3>
+        
         <Person 
           click = {this.switchNameHandler.bind(this, 'Neymar')}
           name ={this.state.persons[0].name} 
