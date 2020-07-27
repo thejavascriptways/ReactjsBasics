@@ -7,9 +7,9 @@ class App extends Component {
 
   state = {
     persons : [
-      { name : 'Messi', age: 30},
-      { name : 'Ronaldo', age: 33},
-      { name : 'Mpappe', age: 26}
+      {id: '1', name : 'Messi', age: 30},
+      {id: '2', name : 'Ronaldo', age: 33},
+      {id: '3', name : 'Mpappe', age: 26}
     ],
     otherState:'some other state value',
     showPersons: false
@@ -19,9 +19,9 @@ class App extends Component {
     this.setState(
       {
         persons:[
-          { name : newName, age: 30},
-          { name : 'Ronaldo', age: 33},
-          { name : 'Mpappe', age: 28}
+          {id : '1', name : newName, age: 30},
+          {id : '2', name : 'Ronaldo', age: 33},
+          {id : '3', name : 'Mpappe', age: 28}
         ] 
       })
   };
@@ -30,9 +30,9 @@ class App extends Component {
     this.setState(
       {
         persons:[
-          { name : 'Messi', age: 30},
-          { name : event.target.value, age: 33},
-          { name : 'Mpappe', age: 28}
+          {id : '1', name : 'Messi', age: 30},
+          {id : '2', name : event.target.value, age: 33},
+          {id : '3', name : 'Mpappe', age: 28}
         ] 
       })
   };
@@ -67,8 +67,10 @@ class App extends Component {
           {this.state.persons.map((person, index)=> {
             return <Person
               click = {() => this.deletePersonHandler(index)}
+              changed = {this.nameChangedHandler}
               name ={person.name} 
-              age = {person.age} />              
+              age = {person.age}
+              key = {person.id} />              
           })}
        </div>
       )

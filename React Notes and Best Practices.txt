@@ -48,7 +48,9 @@ Notes
 
 - components not maintaining state are called stateless components, hey take data from a statefull component and present it.
 
-
+- Evert list in React needs a unique key if we are doing any operations, react will compare this key with the original state and render accordingly.
+  if jey not supplied react throws and not this is inefficient for long lists of data.
+  So the data rendered from database or from any source should always include unique identified.
 
 Reference Links
 
