@@ -85,6 +85,12 @@ class App extends Component {
       )
     }
 
+    style.backgroundColor = 'red';
+    style[':hover']={
+      backgroundColor: 'orange',
+      color: 'black'
+    }
+
     const classes =[];
     if(this.state.persons.length <= 3){
       classes.push('blue');
@@ -108,11 +114,7 @@ class App extends Component {
         {persons}
       </div>
     );
-    style.backgroundColor = 'red';
-    style[':hover']={
-      backgroundColor: 'lightgreen',
-      color: 'black'
-    }
+    
   }
 }
 
