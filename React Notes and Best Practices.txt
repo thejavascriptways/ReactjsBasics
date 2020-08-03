@@ -51,6 +51,14 @@ Notes
   if unique key is not supplied then react throws a warning and this is inefficient for long lists of data.
   So the data rendered from database or from any source should always include unique identified.
 
+-styles
+    -- Use RADIUM for styling Pseudo classes and mesdia quesries.
+    -- Need to wrap the export class wth RADIUM
+    -- If using mesia queries then wrap the entir app with <Styleroot> tag.
+
+
+
+
 Reference Links
     create-react-app: https://github.com/facebookincubator/create-react-app
     Introducing JSX: https://reactjs.org/docs/introducing-jsx.html

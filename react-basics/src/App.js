@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import Person from './Person/Person';
-import Radium from 'radium';
+import Radium, { StyleRoot} from 'radium';
+
+
 //import Validation from './Validation/Valdation';
 //import Char from './Char/Char';
 
@@ -104,15 +106,17 @@ class App extends Component {
 
 
     return (
-      <div className="App">
-        <h1>React app!!</h1>
-        <p className={classes.join(' ')}> This app is working!</p>
-        <button 
-          style={style}
-          onClick={this.togglePersonHandler}>Show/Hide
-        </button>
-        {persons}
-      </div>
+      <StyleRoot>
+        <div className="App">
+          <h1>React app!!</h1>
+          <p className={classes.join(' ')}> This app is working!</p>
+          <button 
+            style={style}
+            onClick={this.togglePersonHandler}>Show/Hide
+          </button>
+          {persons}
+        </div>
+      </StyleRoot>
     );
     
   }
