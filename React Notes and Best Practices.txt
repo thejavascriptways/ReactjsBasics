@@ -56,6 +56,19 @@ Notes
     -- Need to wrap the export class wth RADIUM
     -- If using mesia queries then wrap the entir app with <Styleroot> tag.
 
+- Using CSS Modules 
+    If using react-scripts -ve <2.0
+    -- On command prompt, use below command ( to eject from all the configuration 
+        where we dont have access to workflow low level libs and gives access to how the code bundles
+        together from here on)
+        
+        "npm run eject"
+
+        Select Y
+
+
+            
+        
 
 
 
