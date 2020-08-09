@@ -58,25 +58,25 @@ Notes
 
 - Using CSS Modules  ( it helps to keep css classes to be component specific and
                      allow using regular css in css files)
-    If using react-scripts -ve <2.0
-    -- On command prompt, use below command ( to eject from all the configuration 
-        where we dont have access to workflow low level libs and gives access to how the code bundles
-        together from here on)
-             "npm run eject"
-             Select Y
-    Else no need to do eject step.
-        Name the css file as Person.module.css
-        Use import class from './Person.module.css'; 
+    -- If using react-scripts -ve <2.0
+        On command prompt, use below command ( to eject from all the configuration 
+            where we dont have access to workflow low level libs and gives access to how the code bundles
+            together from here on)
+                "npm run eject"
+                Select Y
+        Else no need to do eject step.
+            Name the css file as Person.module.css
+            Use import class from './Person.module.css'; 
 
-- If you somehow also want to define a global (i.e. un-transformed) CSS class in such a .css  file, 
-    you can prefix the selector with :global .
+    -- If you somehow also want to define a global (i.e. un-transformed) CSS class in such a .css  file, 
+        you can prefix the selector with :global .
 
-    Example:
-        :global .Post { ... } 
-        Now you can use className="Post"  anywhere in your app and receive that styling.
+        Example:
+            :global .Post { ... } 
+            Now you can use className="Post"  anywhere in your app and receive that styling.
 
 
-            
+Debugging React apps           
         
 
 
@@ -89,5 +89,5 @@ Reference Links
     Listenable Events: https://reactjs.org/docs/events.html
     https://www.geekstrick.com/lesson/react-introduction/
     CSS Modules https://github.com/css-modules/css-modules
-    
+
     
