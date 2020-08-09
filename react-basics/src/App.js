@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-
-
-
 import classes from './App.css';
 import Person from './Person/Person';
 
+//import ErrorBoundary from './ErrorBoundary/ErrorBoundary';
 //import Validation from './Validation/Valdation';
 //import Char from './Char/Char';
 
