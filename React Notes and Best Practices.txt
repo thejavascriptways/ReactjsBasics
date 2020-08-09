@@ -76,11 +76,13 @@ Notes
             Now you can use className="Post"  anywhere in your app and receive that styling.
 
 
-Debugging React apps       
-    For debugging logical errors, use developer tools->sources-> put breakpoint on line that's getting called.
-    Use Chrome extension - React Developer 
-    Create ErrorBoundary Component
-        
+- Debugging React apps       
+    --For debugging logical errors, use developer tools->sources-> put breakpoint on line that's getting called.
+    --Use Chrome extension - React Developer 
+        Chrome Devtool Debugging: https://developers.google.com/web/tools/chrome-devtools/javascript/
+    --Create ErrorBoundary Component
+        Error Boundaries: https://reactjs.org/docs/error-boundaries.html
+
 
 
 
