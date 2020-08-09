@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import classes from './App.css';
-import Person from './Person/Person';
-
-//import ErrorBoundary from './ErrorBoundary/ErrorBoundary';
-//import Validation from './Validation/Valdation';
-//import Char from './Char/Char';
-
+import Persons from '../components/Persons/Persons';
+import Cockpit from '../components/Cockpit/Cockpit';
 
 class App extends Component {
 
@@ -32,14 +28,10 @@ class App extends Component {
   
   nameChangedHandler = ( event, id ) => {
     const personIndex = this.state.persons.findIndex( p => p.id === id);
-
     const person = {...this.state.persons[personIndex]};
-
     person.name = event.target.value;
-
     const newPersons = [...this.state.persons];
     newPersons[personIndex] = person;
-    
     this.setState({persons: newPersons});
   };
 
@@ -56,42 +48,27 @@ class App extends Component {
 
   render() {
     let persons = null;
-    let btnClass = [classes.Button];
+    
     if( this.state.showPersons){
       persons = (
         <div> 
-          {this.state.persons.map((person, index)=> {
-            return <Person
-              click = {() => this.deletePersonHandler(index)}
-              changed = {(event) => this.nameChangedHandler(event,person.id)}
-              name ={person.name} 
-              age = {person.age}
-              key = {person.id} />    
-          })}
+          <Persons
+            persons ={this.state.persons}
+            clicked = {this.deletePersonHandler}
+            changed ={this.nameChangedHandler}
+            />
        </div>
       )
-      btnClass.push(classes.Red);
-    }
-
-    const assignedClasses =[];
-    if(this.state.persons.length <= 3){
-      assignedClasses.push(classes.blue);
-    }
-    if(this.state.persons.length <= 2){
-      assignedClasses.push(classes.red);
-    }
-    if(this.state.persons.length <= 1){
-      assignedClasses.push(classes.bold);
     }
 
     return (
      
         <div className={classes.App}>
-          <h1>React app!!</h1>
-          <p className={assignedClasses.join(' ')}> This app is working!</p>
-          <button className={btnClass.join(' ')}
-            onClick={this.togglePersonHandler}>Show/Hide
-          </button>
+          <Cockpit
+            showPersons ={this.state.showPersons}
+            persons ={this.state.persons}
+            toggle ={this.togglePersonHandler}
+            />
           {persons}
         </div>
     );
