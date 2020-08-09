@@ -9,7 +9,12 @@ const cockpit =(props) =>{
       setTimeout(() =>{
         alert("useEffect triggered");
       },1000);
-    }, []);
+      return () => {
+        console.log('Cockpit.js cleanup work');
+      }
+    },[]);
+
+    
 
     let btnClass='';
     if (props.showPersons){
