@@ -83,6 +83,8 @@ Notes
     --Create ErrorBoundary Component
         Error Boundaries: https://reactjs.org/docs/error-boundaries.html
 
+- Use PaintFlashing to see what components on the page gets rerendered
+        Go to  More Tools --> Rendering -> PaintFlashing
 
 
 
