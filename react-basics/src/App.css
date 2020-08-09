@@ -15,17 +15,24 @@
    
 }
 
-.button {
-   background-Color: 'green';
-   color:'white';  
-   font: 'inherit';
-   border: '1px solid blue';
-   padding: '8px';
-   cursor: 'pointer';
+.Button {
+   background-Color: green;
+   color:white;  
+   font: inherit;
+   border: 1px solid blue;
+   padding: 8px;
+   cursor: pointer;
 }
 
-.button:hover{
-     background-Color: 'lightgreen';
-     color: 'black';
+.Button:hover{
+     background-Color: lightgreen;
+     color: black;
 } 
  
+.Button.Red{
+   background-color:  red;
+}
+
+.Button.Red:hover{
+   background-color: salmon;
+}

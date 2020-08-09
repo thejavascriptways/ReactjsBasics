@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 
 
-import './App.css';
+import classes from './App.css';
 import Person from './Person/Person';
 
 //import Validation from './Validation/Valdation';
@@ -57,11 +57,8 @@ class App extends Component {
   }
 
   render() {
-
-    
-
     let persons = null;
-
+    let btnClass = [classes.Button];
     if( this.state.showPersons){
       persons = (
         <div> 
@@ -71,39 +68,35 @@ class App extends Component {
               changed = {(event) => this.nameChangedHandler(event,person.id)}
               name ={person.name} 
               age = {person.age}
-              key = {person.id} />              
+              key = {person.id} />    
           })}
        </div>
       )
+      btnClass.push(classes.Red);
     }
 
-    
-
-    const classes =[];
+    const assignedClasses =[];
     if(this.state.persons.length <= 3){
-      classes.push('blue');
+      assignedClasses.push(classes.blue);
     }
     if(this.state.persons.length <= 2){
-      classes.push('red');
+      assignedClasses.push(classes.red);
     }
     if(this.state.persons.length <= 1){
-      classes.push('bold');
+      assignedClasses.push(classes.bold);
     }
-
 
     return (
      
-        <div className="App">
+        <div className={classes.App}>
           <h1>React app!!</h1>
-          <p className={classes.join(' ')}> This app is working!</p>
-          <button className='button'
+          <p className={assignedClasses.join(' ')}> This app is working!</p>
+          <button className={btnClass.join(' ')}
             onClick={this.togglePersonHandler}>Show/Hide
           </button>
           {persons}
         </div>
-     
     );
-    
   }
 }
 
