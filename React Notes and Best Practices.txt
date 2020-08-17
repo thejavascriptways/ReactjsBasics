@@ -47,8 +47,8 @@ Notes
 
 - components not maintaining state are called stateless components, they take data from a statefull component and present it.
 
-- Evert list in React needs a unique key to be specified in the component/model. If we are doing any operations, react will compare this key with the original state and render accordingly.
-  if unique key is not supplied then react throws a warning and this is inefficient for long lists of data.
+- Evert list in React needs a unique key to be specified in the component/model. If we are doing any operations, react will compare this key with the 
+  original state and render accordingly. If unique key is not supplied then react throws a warning and this is inefficient for long lists of data.
   So the data rendered from database or from any source should always include unique identified.
 
 -styles
@@ -86,6 +86,11 @@ Notes
 - Use PaintFlashing to see what components on the page gets rerendered
         Go to  More Tools --> Rendering -> PaintFlashing
 
+
+- How react updates DOM
+    React does not touch the real DOM unless there is a difference between between the old dom and new dom. Render Method triggers every time, but React 
+    keeps two copies of virtual DOM, old virtual DOM and new Virtul DOM. On comparison if there is a difference found then React updates the only that part 
+    which is different, it does not updates the whole DOM.
 
 
 Reference Links

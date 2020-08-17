@@ -1,16 +1,17 @@
 import React, {Component} from 'react';
 import classPerson from './Person.css';
+import Aux from '../../../containers/hoc/Auxilliary';
 
 
 
 class Person extends Component{
 
-    static getDerivedStateFromProps=(props, state) =>{
-        console.log('Person.js getDerivedStateFromProps');
-        console.log(props);
-        console.log(state);
-        return state;
-      }
+    // static getDerivedStateFromProps=(props, state) =>{
+    //     console.log('Person.js getDerivedStateFromProps');
+    //     console.log(props);
+    //     console.log(state);
+    //     return state;
+    //   }
     
       shouldComponentUpdate = (nextProps, nextState) => {
         console.log('Person.js shouldComponentUpdate');
@@ -33,11 +34,13 @@ class Person extends Component{
     render(){
         console.log('Person.js render');
         return (
-            <div className={classPerson.Person}>
+            // <div className={classPerson.Person}>
+            <Aux>
                 <p onClick ={this.props.click}>I am {this.props.name} and my age is {this.props.age} </p>
                 <p>{this.props.children}</p>
                 <input type ="text" onChange={this.props.changed} value ={this.props.name}/>
-            </div>
+            </Aux>
+            // </div>
             )
         };
     }

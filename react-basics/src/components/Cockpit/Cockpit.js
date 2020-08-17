@@ -3,24 +3,24 @@ import classes from './Cockpit.css';
 
 const cockpit =(props) =>{
 
-    useEffect(() => {
-      console.log('Cockpit.js useEffect');
+    // useEffect(() => {
+    //   console.log('Cockpit.js useEffect');
 
-      setTimeout(() =>{
-        alert("useEffect triggered");
-      },1000);
-      return () => {
-        console.log('Cockpit.js cleanup work');
-      }
-    },[]);
+    //   setTimeout(() =>{
+    //     alert("useEffect triggered");
+    //   },1000);
+    //   return () => {
+    //     console.log('Cockpit.js cleanup work');
+    //   }
+    // },[]);
 
-    useEffect(() => {
-      console.log('Cockpit.js 2nd useEffect');
+    // useEffect(() => {
+    //   console.log('Cockpit.js 2nd useEffect');
       
-      return () => {
-        console.log('Cockpit.js 2nd cleanup work');
-      }
-    });
+    //   return () => {
+    //     console.log('Cockpit.js 2nd cleanup work');
+    //   }
+    // });
 
     let btnClass='';
     if (props.showPersons){

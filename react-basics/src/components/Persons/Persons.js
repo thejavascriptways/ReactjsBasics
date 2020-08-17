@@ -3,12 +3,12 @@ import Person from './Person/Person';
 
 class Persons extends PureComponent {
 
-  static getDerivedStateFromProps=(props, state) =>{
-    console.log('Persons.js getDerivedStateFromProps');
-    console.log(props);
-    console.log(state);
-    return state;
-  }
+  // static getDerivedStateFromProps=(props, state) =>{
+  //   console.log('Persons.js getDerivedStateFromProps');
+  //   console.log(props);
+  //   console.log(state);
+  //   return state;
+  // }
 
   // shouldComponentUpdate = (nextProps, nextState) => {
   //   console.log('Persons.js shouldComponentUpdate');
